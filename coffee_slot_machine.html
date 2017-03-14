@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<title>Coffee Slot Machine</title>
+<style>
+body{
+	position:relative;
+	margin:0;
+	width:800px;
+	margin:0 auto;
+	top:20%;
+	overflow:hidden;
+	font-family:Helvetica Neue,sans-serif;
+	color:#fff;
+	background-color:#000;
+	
+	}
+.reel{
+	float:left;
+	
+	overflow:hidden;
+	margin: 0 0 30px 0;
+	border:5px solid black;
+	border-radius:5px;
+	height:261px;
+	width:170px;
+	}
+.reel .choices{
+	position:relative;
+	top: 0px;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	height:9999px;
+	}
+.reel .choices li,
+.reel .choices li img{
+	
+	width:160px;
+	height:251px;
+	}
+.reel .choices li span:after{
+	position:absolute;
+	left:0;
+	bottom:0;
+	content: attr(data-id);
+	width:100%;
+	padding:5px;
+	font-size:18px;
+	color:#333;
+	background: rgba(200,200,200,0.5);
+	}
+button#spin{
+	display:block;
+	clear:left;
+	height:50px;
+	width:100px;
+	margin:0 auto;
+	font-size:18px;
+	position:absolute;
+	margin-top:300px;
+	margin-left:225px;
+	z-index:100;
+}
+div#winner{
+	margin:30px 0 0 0;
+	font-size:30px;
+	font-family:sans-serif;
+	text-align:center;
+	position:absolute;
+	margin-top:400px;
+	}
+a#cheat{
+	display:block;
+	margin:10px 0 0 0;
+	text-align:center;
+	font-size:11px;
+	text-decoration:none;
+	position:absolute;
+	margin-top:350px;
+	margin-left:225px;
+	color:#fff;
+	z-index:150;
+}
+
+	#slotMachine{
+	width:600px;
+	height:600px;
+	position:absolute;
+	margin-left:116px;
+	margin-top:105px;
+	display:inline-block;}
+	
+#left-panel{
+	position:absolute;
+	margin-left:10px;
+	margin-top:104px;}
+	
+#top-panel{
+	position:absolute;
+	margin-top:10px;
+	margin-left:10px;}
+	
+#right-panel{position:absolute;margin-left:657px;margin-top:104px;}
+#bottom-panel{position:absolute;margin-left:10px;margin-top:375px;}
+</style>
+</head>
+<body>
+<div id="left-panel" >
+	<img src="left_panel.jpg">
+    </div>
+<div id="top-panel" >
+    <img src="top_panel.jpg">
+</div>
+<div id="right-panel" >
+    <img src="right_panel.jpg">
+</div>
+<div id="bottom-panel" >
+<img src="bottom_panel.jpg">
+	</div>
+<div id="slotMachine" >
+    
+	
+	
+    <div class="reel" >
+	
+		<ul class="choices">
+			<li id="coffeemaker" >
+				<span data-id="Coffee maker">
+					<img src="coffee_maker.jpg" alt="Coffee maker" >
+				</span>
+			</li>
+			<li id="teapot" >
+				<span data-id="Teapot">
+					<img src="tea_pot.jpg" alt="Teapots" >
+				</span>
+			</li>
+			<li id="espressomachine" >
+				<span data-id="Espresso machine">
+					<img src="espresso_machine.jpg" alt="Espresso machine"  >
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="reel" >
+		<ul class="choices">
+			<li id="coffeefilter">
+				<span data-id="Coffee filters">
+					<img src="coffee_filter.jpg" alt="Coffee filters" >
+				</span>
+			</li>
+			<li id="teastrainer" >
+				<span data-id="Tea strainer">
+					<img src="tea_strainer.jpg" alt="Tea strainer">
+				</span>
+			</li>
+			<li id="espressotamper" >
+				<span data-id="Espresso tamper">
+					<img src="espresso_tamper.jpg" alt="Espresso tamper" >
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="reel" >
+		<ul class="choices">
+			<li id="coffeeground" >
+				<span data-id="Coffee grounds">
+					<img src="coffee_grounds.jpg" alt="Coffee grounds" >
+				</span>
+			</li>
+			<li id="loosetea" >
+				<span data-id="Loose tea">
+					<img src="loose_tea.jpg" alt="loose tea" >
+				</span>
+			</li>
+			<li id="espressobean" >
+				<span data-id="Espresso beans">
+					<img src="espresso_beans.jpg" alt="Espresso beans"  >
+				</span>
+			</li>
+		</ul>
+		
+	</div>
+	
+	<button id="spin" >Spin</button>
+	<a id="cheat" href="#" >or cheat</a>
+	
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			
+<script src="slotmachine.js"></script>
+	
+	
+	
